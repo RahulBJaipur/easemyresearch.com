@@ -1,0 +1,36 @@
+{
+  "valid_users": [
+    {
+      "id": 1,
+      "email": "researcher@test.com",
+      "password": "TestPass123!",
+      "first_name": "John",
+      "last_name": "Researcher",
+      "role": "researcher",
+      "institution": "Test University",
+      "department": "Computer Science"
+    },
+    {
+      "id": 2,
+      "email": "admin@test.com",
+      "password": "AdminPass123!",
+      "first_name": "Admin",
+      "last_name": "User",
+      "role": "admin",
+      "institution": "Platform Admin",
+      "department": "IT"
+    }
+  ],
+  "invalid_users": [
+    {
+      "email": "invalid-email",
+      "password": "weak",
+      "expected_error": "Invalid email format"
+    },
+    {
+      "email": "test@test.com",
+      "password": "",
+      "expected_error": "Password cannot be empty"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+name: EaseMyResearch Test Suite
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM
+
+jobs:
+  smoke-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome, firefox]
+        
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        
+    - name: Install dependencies
+      run: |
+        cd easemyresearch_test_framework
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run smoke tests
+      run: |
+        cd easemyresearch_test_framework
+        python run_tests.py --test-type smoke --browser ${{ matrix.browser }} --headless --environment development
+        
+    - name: Upload test reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-reports-${{ matrix.browser }}
+        path: easemyresearch_test_framework/reports/
+        
+    - name: Upload screenshots
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: screenshots-${{ matrix.browser }}
+        path: easemyresearch_test_framework/screenshots/
+
+  api-tests:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        cd easemyresearch_test_framework
+        pip install -r requirements.txt
+        
+    - name: Run API tests
+      run: |
+        cd easemyresearch_test_framework
+        python run_tests.py --test-type api --environment development
+
+  security-tests:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        cd easemyresearch_test_framework
+        pip install -r requirements.txt
+        
+    - name: Run security tests
+      run: |
+        cd easemyresearch_test_framework
+        python run_tests.py security-tests

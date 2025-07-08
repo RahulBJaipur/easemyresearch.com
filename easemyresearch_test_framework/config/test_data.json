@@ -1,0 +1,225 @@
+{
+  "test_users": {
+    "valid_users": [
+      {
+        "id": 1,
+        "email": "researcher1@test.com",
+        "password": "TestPass123!",
+        "first_name": "John",
+        "last_name": "Researcher",
+        "role": "researcher",
+        "institution": "Test University",
+        "department": "Computer Science",
+        "verified": true
+      },
+      {
+        "id": 2,
+        "email": "admin@test.com",
+        "password": "AdminPass123!",
+        "first_name": "Admin",
+        "last_name": "User",
+        "role": "admin",
+        "institution": "Platform Admin",
+        "department": "IT",
+        "verified": true
+      },
+      {
+        "id": 3,
+        "email": "student@test.com",
+        "password": "StudentPass123!",
+        "first_name": "Jane",
+        "last_name": "Student",
+        "role": "student",
+        "institution": "Test College",
+        "department": "Biology",
+        "verified": true
+      }
+    ],
+    "invalid_users": [
+      {
+        "email": "invalid-email",
+        "password": "weak",
+        "expected_error": "Invalid email format"
+      },
+      {
+        "email": "test@test.com",
+        "password": "",
+        "expected_error": "Password cannot be empty"
+      },
+      {
+        "email": "",
+        "password": "TestPass123!",
+        "expected_error": "Email cannot be empty"
+      }
+    ]
+  },
+  "research_data": {
+    "sample_searches": [
+      {
+        "query": "machine learning algorithms",
+        "filters": {
+          "year": "2023",
+          "category": "Computer Science",
+          "type": "research paper"
+        },
+        "expected_results": "> 0"
+      },
+      {
+        "query": "climate change impact",
+        "filters": {
+          "year": "2022-2023",
+          "category": "Environmental Science",
+          "type": "journal article"
+        },
+        "expected_results": "> 0"
+      },
+      {
+        "query": "nonexistent research topic xyz123",
+        "filters": {},
+        "expected_results": "0"
+      }
+    ],
+    "sample_papers": [
+      {
+        "title": "Advanced Machine Learning Techniques for Data Analysis",
+        "authors": ["Dr. Smith", "Dr. Johnson"],
+        "abstract": "This paper explores advanced machine learning techniques...",
+        "keywords": ["machine learning", "data analysis", "algorithms"],
+        "year": 2023,
+        "doi": "10.1000/xyz123",
+        "category": "Computer Science"
+      },
+      {
+        "title": "Climate Change Effects on Marine Ecosystems",
+        "authors": ["Dr. Brown", "Dr. Wilson"],
+        "abstract": "An comprehensive study on climate change impacts...",
+        "keywords": ["climate change", "marine biology", "ecosystems"],
+        "year": 2023,
+        "doi": "10.1000/abc456",
+        "category": "Environmental Science"
+      }
+    ]
+  },
+  "form_data": {
+    "registration_forms": [
+      {
+        "valid_data": {
+          "first_name": "Test",
+          "last_name": "User",
+          "email": "newuser@test.com",
+          "password": "NewUserPass123!",
+          "confirm_password": "NewUserPass123!",
+          "institution": "Test Institution",
+          "department": "Research",
+          "terms_accepted": true
+        }
+      },
+      {
+        "invalid_data": {
+          "first_name": "",
+          "last_name": "User",
+          "email": "invalid-email",
+          "password": "weak",
+          "confirm_password": "different",
+          "institution": "",
+          "department": "",
+          "terms_accepted": false
+        }
+      }
+    ],
+    "contact_forms": [
+      {
+        "name": "John Doe",
+        "email": "john.doe@test.com",
+        "subject": "Test Inquiry",
+        "message": "This is a test message for contact form validation."
+      }
+    ]
+  },
+  "ui_elements": {
+    "navigation_items": [
+      "Home",
+      "Search",
+      "Browse",
+      "About",
+      "Contact",
+      "Login",
+      "Register"
+    ],
+    "search_filters": [
+      "Year",
+      "Category",
+      "Author",
+      "Institution",
+      "Publication Type",
+      "Language"
+    ]
+  },
+  "api_endpoints": {
+    "authentication": {
+      "login": "/api/auth/login",
+      "logout": "/api/auth/logout",
+      "register": "/api/auth/register",
+      "refresh": "/api/auth/refresh"
+    },
+    "search": {
+      "basic_search": "/api/search",
+      "advanced_search": "/api/search/advanced",
+      "suggestions": "/api/search/suggestions"
+    },
+    "user_management": {
+      "profile": "/api/user/profile",
+      "update_profile": "/api/user/profile/update",
+      "change_password": "/api/user/password/change"
+    },
+    "research": {
+      "papers": "/api/research/papers",
+      "categories": "/api/research/categories",
+      "authors": "/api/research/authors"
+    }
+  },
+  "expected_responses": {
+    "success_messages": [
+      "Registration successful",
+      "Login successful",
+      "Profile updated successfully",
+      "Password changed successfully"
+    ],
+    "error_messages": [
+      "Invalid credentials",
+      "User not found",
+      "Email already exists",
+      "Password does not meet requirements"
+    ]
+  },
+  "test_scenarios": {
+    "smoke_tests": [
+      "Homepage loads successfully",
+      "Navigation menu is functional",
+      "Search functionality works",
+      "User can register",
+      "User can login"
+    ],
+    "regression_tests": [
+      "All CRUD operations work",
+      "Search with various filters",
+      "User profile management",
+      "Password reset functionality",
+      "Email notifications"
+    ]
+  },
+  "performance_benchmarks": {
+    "page_load_times": {
+      "homepage": 3.0,
+      "search_results": 5.0,
+      "user_profile": 2.0,
+      "registration": 3.0
+    },
+    "api_response_times": {
+      "login": 1.0,
+      "search": 2.0,
+      "user_profile": 1.5,
+      "registration": 2.0
+    }
+  }
+}
