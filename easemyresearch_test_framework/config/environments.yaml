@@ -13,10 +13,10 @@ environments:
       performance_testing: false
       security_testing: true
     credentials:
-      admin_user: "dev_admin@easemyresearch.com"
-      admin_password: "DevAdmin123!"
-      test_user: "dev_test@easemyresearch.com"
-      test_password: "DevTest123!"
+      test_user_one: "testoneemr@gmail.com"
+      test_password_one: "12345678"
+      test_user_two: "testtwoemr@gmail.com"
+      test_password_two: "12345678"
     timeouts:
       page_load: 60
       api_response: 45
@@ -33,10 +33,10 @@ environments:
       performance_testing: true
       security_testing: true
     credentials:
-      admin_user: "staging_admin@easemyresearch.com"
-      admin_password: "StagingAdmin123!"
-      test_user: "staging_test@easemyresearch.com"
-      test_password: "StagingTest123!"
+      test_user_one: "testoneemr@gmail.com"
+      test_password_one: "12345678"
+      test_user_two: "testtwoemr@gmail.com"
+      test_password_two: "12345678"
     timeouts:
       page_load: 30
       api_response: 30
@@ -54,11 +54,11 @@ environments:
       security_testing: false     # No penetration testing on prod
       smoke_testing_only: true
     credentials:
-      # Use environment variables for production credentials
-      admin_user: "${PROD_ADMIN_USER}"
-      admin_password: "${PROD_ADMIN_PASSWORD}"
-      test_user: "${PROD_TEST_USER}"
-      test_password: "${PROD_TEST_PASSWORD}"
+      # Use environment variables for production credentials for security
+      test_user_one: "${PROD_TEST_USER_ONE:-testoneemr@gmail.com}"
+      test_password_one: "${PROD_TEST_PASSWORD_ONE:-12345678}"
+      test_user_two: "${PROD_TEST_USER_TWO:-testtwoemr@gmail.com}"
+      test_password_two: "${PROD_TEST_PASSWORD_TWO:-12345678}"
     timeouts:
       page_load: 15
       api_response: 15
@@ -80,10 +80,10 @@ environments:
       security_testing: true
       accessibility_testing: true
     credentials:
-      admin_user: "qa_admin@easemyresearch.com"
-      admin_password: "QaAdmin123!"
-      test_user: "qa_test@easemyresearch.com"
-      test_password: "QaTest123!"
+      test_user_one: "testoneemr@gmail.com"
+      test_password_one: "12345678"
+      test_user_two: "testtwoemr@gmail.com"
+      test_password_two: "12345678"
     timeouts:
       page_load: 30
       api_response: 30
@@ -103,10 +103,10 @@ environments:
       performance_testing: false
       security_testing: false
     credentials:
-      admin_user: "admin@localhost"
-      admin_password: "LocalAdmin123!"
-      test_user: "test@localhost"
-      test_password: "LocalTest123!"
+      test_user_one: "testoneemr@gmail.com"
+      test_password_one: "12345678"
+      test_user_two: "testtwoemr@gmail.com"
+      test_password_two: "12345678"
     timeouts:
       page_load: 60
       api_response: 60

@@ -186,15 +186,31 @@ The framework includes:
 - Best practices documentation
 - Extension guidelines
 
+## Test Credentials Configured ✅
+
+The framework is now configured with active test credentials:
+- **User 1**: `testoneemr@gmail.com` / `12345678`
+- **User 2**: `testtwoemr@gmail.com` / `12345678`
+
+See `TEST_CREDENTIALS.md` for complete usage documentation and examples.
+
 ## Next Steps
 
 To fully utilize this framework:
 
-1. **Environment Setup** - Configure actual environment URLs and credentials
-2. **Test Data** - Update test data files with real test scenarios
-3. **Page Objects** - Extend page objects based on actual application structure
+1. **Environment Setup** - Configure actual environment URLs (credentials already configured ✅)
+2. **Test Data** - Extend test data files with additional test scenarios
+3. **Page Objects** - Update page objects based on actual application structure  
 4. **Test Coverage** - Add more specific test cases based on application features
 5. **CI/CD Integration** - Set up the framework in your CI/CD pipeline
 6. **Team Training** - Train team members on framework usage and best practices
+
+## Quick Validation
+
+Run the credential validation script to verify configuration:
+```bash
+cd easemyresearch_test_framework
+python3 validate_credentials.py
+```
 
 This framework provides a solid foundation for comprehensive testing of the EaseMyResearch platform and can be easily extended as the application evolves.

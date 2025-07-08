@@ -56,6 +56,12 @@ environments:
 ### Test Data
 Update `config/test_data.json` with test users and data.
 
+**Active Test Credentials:**
+- User 1: `testoneemr@gmail.com` / `12345678`
+- User 2: `testtwoemr@gmail.com` / `12345678`
+
+See `TEST_CREDENTIALS.md` for detailed usage instructions.
+
 ## Running Tests
 
 ### Command Line Options

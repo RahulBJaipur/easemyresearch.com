@@ -50,20 +50,20 @@ class TestDataManager:
             self.logger.error(f"Failed to load test data: {e}")
             return {}
     
-    def get_valid_user(self, role: str = 'researcher') -> Dict[str, Any]:
+    def get_valid_user(self, user_type: str = 'user_one') -> Dict[str, Any]:
         """Get valid user data for testing"""
         users = {
-            'researcher': {
-                'email': 'researcher@test.com',
-                'password': 'TestPass123!',
-                'first_name': 'John',
-                'last_name': 'Researcher'
+            'user_one': {
+                'email': 'testoneemr@gmail.com',
+                'password': '12345678',
+                'first_name': 'Test',
+                'last_name': 'User One'
             },
-            'admin': {
-                'email': 'admin@test.com',
-                'password': 'AdminPass123!',
-                'first_name': 'Admin',
-                'last_name': 'User'
+            'user_two': {
+                'email': 'testtwoemr@gmail.com',
+                'password': '12345678',
+                'first_name': 'Test',
+                'last_name': 'User Two'
             }
         }
-        return users.get(role, users['researcher'])
+        return users.get(user_type, users['user_one'])
