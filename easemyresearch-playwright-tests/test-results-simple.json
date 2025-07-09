@@ -1,0 +1,1383 @@
+{
+  "config": {
+    "configFile": "/workspace/easemyresearch-playwright-tests/playwright.config.simple.ts",
+    "rootDir": "/workspace/easemyresearch-playwright-tests/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/workspace/easemyresearch-playwright-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/workspace/easemyresearch-playwright-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "functional/homepage/homepage-functional.spec.ts",
+      "file": "functional/homepage/homepage-functional.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Homepage Functional Testing - EaseMyResearch.com",
+          "file": "functional/homepage/homepage-functional.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Page Loading and Basic Structure",
+              "file": "functional/homepage/homepage-functional.spec.ts",
+              "line": 41,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should load homepage successfully with correct title @smoke @critical",
+                  "ok": true,
+                  "tags": [
+                    "smoke",
+                    "critical"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5513,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should load homepage successfully with correct title @smoke @critical\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📄 Page title: \"EaseMyResearch\"\n"
+                            },
+                            {
+                              "text": "🔗 Current URL: https://easemyresearch.com/\n"
+                            },
+                            {
+                              "text": "🏗️ Checking page structure sections...\n"
+                            },
+                            {
+                              "text": "📊 Page Structure:\n"
+                            },
+                            {
+                              "text": "   header: ❌\n"
+                            },
+                            {
+                              "text": "   navigation: ✅\n"
+                            },
+                            {
+                              "text": "   main: ❌\n"
+                            },
+                            {
+                              "text": "   footer: ✅\n"
+                            },
+                            {
+                              "text": "   logo: ❌\n"
+                            },
+                            {
+                              "text": "🏗️ Page sections found: navigation, footer\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should load homepage successfully with correct title @smoke @critical\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Navigate to homepage",
+                              "duration": 5200
+                            },
+                            {
+                              "title": "Verify page title is present and not empty",
+                              "duration": 4
+                            },
+                            {
+                              "title": "Verify URL contains easemyresearch",
+                              "duration": 1
+                            },
+                            {
+                              "title": "Verify basic page structure exists",
+                              "duration": 47
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:06.284Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-fde73dce7d64ee7f8107",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 42,
+                  "column": 9
+                },
+                {
+                  "title": "should have proper HTML structure and semantic elements @accessibility",
+                  "ok": true,
+                  "tags": [
+                    "accessibility"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5533,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should have proper HTML structure and semantic elements @accessibility\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🏗️ Semantic structure: Header=false, Main=false, Footer=false\n"
+                            },
+                            {
+                              "text": "📋 Found 42 headings on page\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should have proper HTML structure and semantic elements @accessibility\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Check for semantic HTML elements",
+                              "duration": 42
+                            },
+                            {
+                              "title": "Verify page has at least one heading",
+                              "duration": 5
+                            },
+                            {
+                              "title": "Check for language attribute",
+                              "duration": 5
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:11.863Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-a2490e9c4efd999d7bf6",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 69,
+                  "column": 9
+                },
+                {
+                  "title": "should load all external resources successfully @performance",
+                  "ok": true,
+                  "tags": [
+                    "performance"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5630,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should load all external resources successfully @performance\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🖼️ Testing image accessibility...\n"
+                            },
+                            {
+                              "text": "📊 Image Accessibility:\n"
+                            },
+                            {
+                              "text": "   Total images: 88\n"
+                            },
+                            {
+                              "text": "   With alt text: 88\n"
+                            },
+                            {
+                              "text": "   Without alt text: 0\n"
+                            },
+                            {
+                              "text": "🖼️ Images: 88 total, 88 with alt text\n"
+                            },
+                            {
+                              "text": "✅ All 88 images loaded successfully\n"
+                            },
+                            {
+                              "text": "⚡ Page performance metrics collected\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should load all external resources successfully @performance\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Check image loading",
+                              "duration": 172
+                            },
+                            {
+                              "title": "Check page performance",
+                              "duration": 5
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:17.404Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-bdbe98a2f3751c20f98a",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 93,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Navigation and Menu Testing",
+              "file": "functional/homepage/homepage-functional.spec.ts",
+              "line": 115,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should have functional navigation menu @critical",
+                  "ok": true,
+                  "tags": [
+                    "critical"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 8561,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should have functional navigation menu @critical\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🧭 Analyzing navigation menu...\n"
+                            },
+                            {
+                              "text": "🧭 Navigation menu has 4 items\n"
+                            },
+                            {
+                              "text": "🧭 Analyzing navigation menu...\n"
+                            },
+                            {
+                              "text": "✅ Nav item 1: \"easemyresearch\" -> /\n"
+                            },
+                            {
+                              "text": "✅ Nav item 2: \"Home\" -> /\n"
+                            },
+                            {
+                              "text": "✅ Nav item 3: \"Pricing\" -> /pricing\n"
+                            },
+                            {
+                              "text": "✅ Nav item 4: \"Blog\" -> /blog\n"
+                            },
+                            {
+                              "text": "📱 Testing responsive design...\n"
+                            },
+                            {
+                              "text": "📱 mobile (375x667): ✅\n"
+                            },
+                            {
+                              "text": "📱 tablet (768x1024): ❌\n"
+                            },
+                            {
+                              "text": "📱 desktop (1920x1080): ✅\n"
+                            },
+                            {
+                              "text": "📱 Mobile navigation support detected\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should have functional navigation menu @critical\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Verify navigation menu exists and is visible",
+                              "duration": 55
+                            },
+                            {
+                              "title": "Test navigation menu items are clickable",
+                              "duration": 43
+                            },
+                            {
+                              "title": "Test mobile navigation if present",
+                              "duration": 3092
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:23.040Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-34d01dcb6c7e0a4f4318",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 116,
+                  "column": 9
+                },
+                {
+                  "title": "should analyze all homepage links for functionality @critical",
+                  "ok": true,
+                  "tags": [
+                    "critical"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5721,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should analyze all homepage links for functionality @critical\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔗 Analyzing all links on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Found 27 links to analyze\n"
+                            },
+                            {
+                              "text": "🔗 Total links found: 23\n"
+                            },
+                            {
+                              "text": "✅ Working links: 21\n"
+                            },
+                            {
+                              "text": "❌ Problematic links: 2\n"
+                            },
+                            {
+                              "text": "  1. \"easemyresearch\" -> /\n"
+                            },
+                            {
+                              "text": "  2. \"Home\" -> /\n"
+                            },
+                            {
+                              "text": "  3. \"Pricing\" -> /pricing\n"
+                            },
+                            {
+                              "text": "  4. \"Blog\" -> /blog\n"
+                            },
+                            {
+                              "text": "  5. \"View All\" -> /blogs\n"
+                            },
+                            {
+                              "text": "  6. \"Read More\" -> /blog/1\n"
+                            },
+                            {
+                              "text": "  7. \"Read More\" -> /blog/2\n"
+                            },
+                            {
+                              "text": "  8. \"Read More\" -> /blog/3\n"
+                            },
+                            {
+                              "text": "  9. \"Read More\" -> /blog/4\n"
+                            },
+                            {
+                              "text": "  10. \"Link 14\" -> https://play.google.com/store\n"
+                            },
+                            {
+                              "text": "⚠️ Problematic links:\n"
+                            },
+                            {
+                              "text": "  1. \"Link 21\" -> https://play.google.com/store (error)\n"
+                            },
+                            {
+                              "text": "  2. \"Link 22\" -> https://play.google.com/store (error)\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should analyze all homepage links for functionality @critical\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Get and analyze all links",
+                              "duration": 341
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:31.607Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-cb6ee15f2a8b7cc7bf0b",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 152,
+                  "column": 9
+                },
+                {
+                  "title": "should test breadcrumb navigation if present @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5368,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test breadcrumb navigation if present @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "ℹ️ No breadcrumb navigation found on homepage\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test breadcrumb navigation if present @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Check for breadcrumb navigation",
+                              "duration": 23
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:37.333Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-a1cf7f81b425f2338bd9",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 182,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Form Testing and Interactions",
+              "file": "functional/homepage/homepage-functional.spec.ts",
+              "line": 212,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should analyze and test all forms on homepage @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5373,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should analyze and test all forms on homepage @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "📝 Found 0 forms on homepage\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should analyze and test all forms on homepage @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Find and analyze all forms",
+                              "duration": 12
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:42.705Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-6407790cc3da0cc1f973",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 213,
+                  "column": 9
+                },
+                {
+                  "title": "should test search functionality if present @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 10507,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test search functionality if present @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"research\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🔍 Search test passed for query: \"research\"\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"machine learning\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🔍 Search test passed for query: \"machine learning\"\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"data analysis\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🔍 Search test passed for query: \"data analysis\"\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"AI\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🔍 Search test passed for query: \"AI\"\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"statistics\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🔍 Search test passed for query: \"statistics\"\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🔍 Empty search test completed\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test search functionality if present @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test search input and functionality",
+                              "duration": 5035
+                            },
+                            {
+                              "title": "Test search with empty input",
+                              "duration": 3
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:48.083Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-fe94f454be14c9f52880",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 242,
+                  "column": 9
+                },
+                {
+                  "title": "should test contact form if present @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5493,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test contact form if present @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "ℹ️ No contact form found on homepage\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test contact form if present @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Find and test contact form",
+                              "duration": 18
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:29:58.594Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-3018e7069d2a552a0d40",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 272,
+                  "column": 9
+                },
+                {
+                  "title": "should test newsletter subscription if present @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5368,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test newsletter subscription if present @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "ℹ️ No newsletter subscription form found on homepage\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test newsletter subscription if present @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Find and test newsletter form",
+                              "duration": 21
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:30:04.092Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-8070b130cd5ef48b6a0c",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 326,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Authentication Testing - Without Login",
+              "file": "functional/homepage/homepage-functional.spec.ts",
+              "line": 367,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should test login/register links and forms @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 8299,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test login/register links and forms @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔑 Checking authentication links...\n"
+                            },
+                            {
+                              "text": "   Login link: ✅\n"
+                            },
+                            {
+                              "text": "   Register link: ❌\n"
+                            },
+                            {
+                              "text": "🔑 Authentication links found - Login: true, Register: false\n"
+                            },
+                            {
+                              "text": "⚠️ Login link found but form not detected\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "ℹ️ No registration links found on homepage\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test login/register links and forms @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Check for authentication links",
+                              "duration": 16
+                            },
+                            {
+                              "title": "Test login form access",
+                              "duration": 1106
+                            },
+                            {
+                              "title": "Test registration form access",
+                              "duration": 1846
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:30:09.465Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-023a1b6036238700d34a",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 368,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Authentication Testing - With Login",
+              "file": "functional/homepage/homepage-functional.spec.ts",
+              "line": 454,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should test login functionality with valid credentials @critical",
+                  "ok": true,
+                  "tags": [
+                    "critical"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 11898,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test login functionality with valid credentials @critical\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for testoneemr@gmail.com...\n"
+                            },
+                            {
+                              "text": "👤 Login test for testoneemr@gmail.com: ❌ Failed/Not Available\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for testtwoemr@gmail.com...\n"
+                            },
+                            {
+                              "text": "👤 Login test for testtwoemr@gmail.com: ❌ Failed/Not Available\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test login functionality with valid credentials @critical\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test login with Test User 1",
+                              "duration": 7388
+                            },
+                            {
+                              "title": "Test login with Test User 2",
+                              "duration": 4266
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:30:17.768Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-e1141131a1cf10d238bc",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 455,
+                  "column": 9
+                },
+                {
+                  "title": "should test user-specific content and features when logged in @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 7509,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test user-specific content and features when logged in @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for testoneemr@gmail.com...\n"
+                            },
+                            {
+                              "text": "⚠️ Could not test logged-in features - login not successful\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test user-specific content and features when logged in @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-07-09T02:30:29.670Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-c6e1586541ebacffbf60",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 518,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Content Validation and Interactive Elements",
+              "file": "functional/homepage/homepage-functional.spec.ts",
+              "line": 598,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should validate page content and text @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5494,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should validate page content and text @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📚 Research-related keywords found: research, data, analysis, study\n"
+                            },
+                            {
+                              "text": "📧 Contact information pattern found\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should validate page content and text @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Check for essential content",
+                              "duration": 14
+                            },
+                            {
+                              "title": "Check for contact information",
+                              "duration": 3
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:30:37.183Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-fd525e7971317db26166",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 599,
+                  "column": 9
+                },
+                {
+                  "title": "should test interactive elements and buttons @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5490,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test interactive elements and buttons @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔘 Found 32 buttons to test\n"
+                            },
+                            {
+                              "text": "🔘 Total clickable buttons: 0/10\n"
+                            },
+                            {
+                              "text": "📋 Total dropdown elements: 0\n"
+                            },
+                            {
+                              "text": "🪟 Total modal triggers: 0\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test interactive elements and buttons @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test all buttons for clickability",
+                              "duration": 20
+                            },
+                            {
+                              "title": "Test dropdown menus if present",
+                              "duration": 14
+                            },
+                            {
+                              "title": "Test modal dialogs if present",
+                              "duration": 7
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:30:42.681Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-87bee9eab15e859b4551",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 640,
+                  "column": 9
+                },
+                {
+                  "title": "should test social media and external integrations @functional",
+                  "ok": true,
+                  "tags": [
+                    "functional"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5411,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting functional test: should test social media and external integrations @functional\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📱 Checking social media links...\n"
+                            },
+                            {
+                              "text": "   Found 3 social media links\n"
+                            },
+                            {
+                              "text": "   1. https://www.linkedin.com\n"
+                            },
+                            {
+                              "text": "   2. https://www.facebook.com\n"
+                            },
+                            {
+                              "text": "   3. https://www.instagram.com\n"
+                            },
+                            {
+                              "text": "📱 Social media platforms found: 3\n"
+                            },
+                            {
+                              "text": "  1. Linkedin: https://www.linkedin.com\n"
+                            },
+                            {
+                              "text": "  2. Facebook: https://www.facebook.com\n"
+                            },
+                            {
+                              "text": "  3. Instagram: https://www.instagram.com\n"
+                            },
+                            {
+                              "text": "🔌 Total external integrations: 0\n"
+                            },
+                            {
+                              "text": "✅ Completed functional test: should test social media and external integrations @functional\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Check social media links",
+                              "duration": 25
+                            },
+                            {
+                              "title": "Check for external widgets and integrations",
+                              "duration": 16
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:30:48.175Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "4a18b08af5c0f2833c65-9248895a864c03ed8c90",
+                  "file": "functional/homepage/homepage-functional.spec.ts",
+                  "line": 713,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-09T02:29:05.434Z",
+    "duration": 108192.672,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

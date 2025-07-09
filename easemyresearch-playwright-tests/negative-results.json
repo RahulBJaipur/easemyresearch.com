@@ -1,0 +1,1801 @@
+{
+  "config": {
+    "configFile": "/workspace/easemyresearch-playwright-tests/playwright.config.simple.ts",
+    "rootDir": "/workspace/easemyresearch-playwright-tests/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/workspace/easemyresearch-playwright-tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/workspace/easemyresearch-playwright-tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "negative/homepage/homepage-negative.spec.ts",
+      "file": "negative/homepage/homepage-negative.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Homepage Negative Testing - EaseMyResearch.com",
+          "file": "negative/homepage/homepage-negative.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Authentication Security Testing",
+              "file": "negative/homepage/homepage-negative.spec.ts",
+              "line": 39,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should reject invalid login attempts @security @negative",
+                  "ok": true,
+                  "tags": [
+                    "security",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 7680,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should reject invalid login attempts @security @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for invalid@example.com...\n"
+                            },
+                            {
+                              "text": "❌ Invalid login correctly rejected: invalid@example.com\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for ...\n"
+                            },
+                            {
+                              "text": "❌ Invalid login correctly rejected: \n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for invalid-email...\n"
+                            },
+                            {
+                              "text": "❌ Invalid login correctly rejected: invalid-email\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for ' OR '1'='1...\n"
+                            },
+                            {
+                              "text": "❌ Invalid login correctly rejected: ' OR '1'='1\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for <script>alert(\"xss\")</script>...\n"
+                            },
+                            {
+                              "text": "❌ Invalid login correctly rejected: <script>alert(\"xss\")</script>\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should reject invalid login attempts @security @negative\n"
+                            }
+                          ],
+                          "stderr": [
+                            {
+                              "text": "⚠️ Error during login test: Error: locator.isVisible: Error: strict mode violation: locator('button:has-text(\"login\")') resolved to 2 elements:\n    1) <button class=\"border px-4 py-2\">Login/SignUp</button> aka getByRole('button', { name: 'Login/SignUp' })\n    2) <button class=\"btn EMR_auth_button email-button w-100 mt-3 d-flex justify-content-center d-none d-md-flex\">…</button> aka getByRole('button', { name: 'email Login with Email' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('button:has-text(\"login\")')\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "⚠️ Error during login test: Error: locator.isVisible: Error: strict mode violation: locator('button:has-text(\"login\")') resolved to 2 elements:\n    1) <button class=\"border px-4 py-2\">Login/SignUp</button> aka getByRole('button', { name: 'Login/SignUp' })\n    2) <button class=\"btn EMR_auth_button email-button w-100 mt-3 d-flex justify-content-center d-none d-md-flex\">…</button> aka getByRole('button', { name: 'email Login with Email' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('button:has-text(\"login\")')\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "⚠️ Error during login test: Error: locator.isVisible: Error: strict mode violation: locator('button:has-text(\"login\")') resolved to 2 elements:\n    1) <button class=\"border px-4 py-2\">Login/SignUp</button> aka getByRole('button', { name: 'Login/SignUp' })\n    2) <button class=\"btn EMR_auth_button email-button w-100 mt-3 d-flex justify-content-center d-none d-md-flex\">…</button> aka getByRole('button', { name: 'email Login with Email' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('button:has-text(\"login\")')\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "⚠️ Error during login test: Error: locator.isVisible: Error: strict mode violation: locator('button:has-text(\"login\")') resolved to 2 elements:\n    1) <button class=\"border px-4 py-2\">Login/SignUp</button> aka getByRole('button', { name: 'Login/SignUp' })\n    2) <button class=\"btn EMR_auth_button email-button w-100 mt-3 d-flex justify-content-center d-none d-md-flex\">…</button> aka getByRole('button', { name: 'email Login with Email' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('button:has-text(\"login\")')\u001b[22m\n\n"
+                            }
+                          ],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test invalid login: Invalid User",
+                              "duration": 2138
+                            },
+                            {
+                              "title": "Test invalid login: Empty Email",
+                              "duration": 32
+                            },
+                            {
+                              "title": "Test invalid login: Invalid Format",
+                              "duration": 24
+                            },
+                            {
+                              "title": "Test invalid login: SQL Injection",
+                              "duration": 25
+                            },
+                            {
+                              "title": "Test invalid login: XSS Attempt",
+                              "duration": 31
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:31:13.772Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-830fb7023423fb0a1171",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 40,
+                  "column": 9
+                },
+                {
+                  "title": "should handle brute force protection @security @negative",
+                  "ok": true,
+                  "tags": [
+                    "security",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 7547,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle brute force protection @security @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for invalid@example.com...\n"
+                            },
+                            {
+                              "text": "🔒 Brute force attempt 1: rejected\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for invalid@example.com...\n"
+                            },
+                            {
+                              "text": "🔒 Brute force attempt 2: rejected\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for invalid@example.com...\n"
+                            },
+                            {
+                              "text": "🔒 Brute force attempt 3: rejected\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for invalid@example.com...\n"
+                            },
+                            {
+                              "text": "🔒 Brute force attempt 4: rejected\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for invalid@example.com...\n"
+                            },
+                            {
+                              "text": "🔒 Brute force attempt 5: rejected\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle brute force protection @security @negative\n"
+                            }
+                          ],
+                          "stderr": [
+                            {
+                              "text": "⚠️ Error during login test: Error: locator.isVisible: Error: strict mode violation: locator('button:has-text(\"login\")') resolved to 2 elements:\n    1) <button class=\"border px-4 py-2\">Login/SignUp</button> aka getByRole('button', { name: 'Login/SignUp' })\n    2) <button class=\"btn EMR_auth_button email-button w-100 mt-3 d-flex justify-content-center d-none d-md-flex\">…</button> aka getByRole('button', { name: 'email Login with Email' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('button:has-text(\"login\")')\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "⚠️ Error during login test: Error: locator.isVisible: Error: strict mode violation: locator('button:has-text(\"login\")') resolved to 2 elements:\n    1) <button class=\"border px-4 py-2\">Login/SignUp</button> aka getByRole('button', { name: 'Login/SignUp' })\n    2) <button class=\"btn EMR_auth_button email-button w-100 mt-3 d-flex justify-content-center d-none d-md-flex\">…</button> aka getByRole('button', { name: 'email Login with Email' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('button:has-text(\"login\")')\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "⚠️ Error during login test: Error: locator.isVisible: Error: strict mode violation: locator('button:has-text(\"login\")') resolved to 2 elements:\n    1) <button class=\"border px-4 py-2\">Login/SignUp</button> aka getByRole('button', { name: 'Login/SignUp' })\n    2) <button class=\"btn EMR_auth_button email-button w-100 mt-3 d-flex justify-content-center d-none d-md-flex\">…</button> aka getByRole('button', { name: 'email Login with Email' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('button:has-text(\"login\")')\u001b[22m\n\n"
+                            },
+                            {
+                              "text": "⚠️ Error during login test: Error: locator.isVisible: Error: strict mode violation: locator('button:has-text(\"login\")') resolved to 2 elements:\n    1) <button class=\"border px-4 py-2\">Login/SignUp</button> aka getByRole('button', { name: 'Login/SignUp' })\n    2) <button class=\"btn EMR_auth_button email-button w-100 mt-3 d-flex justify-content-center d-none d-md-flex\">…</button> aka getByRole('button', { name: 'email Login with Email' })\n\nCall log:\n\u001b[2m    - checking visibility of locator('button:has-text(\"login\")')\u001b[22m\n\n"
+                            }
+                          ],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Multiple failed login attempts",
+                              "duration": 2213
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:31:21.521Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-56a801ff583209c9c76d",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 52,
+                  "column": 9
+                },
+                {
+                  "title": "should prevent session fixation @security @negative",
+                  "ok": true,
+                  "tags": [
+                    "security",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 7508,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should prevent session fixation @security @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔐 Testing login functionality for testoneemr@gmail.com...\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should prevent session fixation @security @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test session security",
+                              "duration": 2128
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:31:29.074Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-cc85c206c6ab8975430a",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 64,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Form Validation Testing",
+              "file": "negative/homepage/homepage-negative.spec.ts",
+              "line": 79,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should validate form inputs properly @validation @negative",
+                  "ok": true,
+                  "tags": [
+                    "validation",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5467,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should validate form inputs properly @validation @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should validate form inputs properly @validation @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test form validation",
+                              "duration": 12
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:31:36.589Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-d0431f045c85a99c2479",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 80,
+                  "column": 9
+                },
+                {
+                  "title": "should handle empty form submissions @validation @negative",
+                  "ok": true,
+                  "tags": [
+                    "validation",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5480,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle empty form submissions @validation @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle empty form submissions @validation @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Submit empty forms",
+                              "duration": 11
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:31:42.061Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-54074d7706ffeded4d2e",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 99,
+                  "column": 9
+                },
+                {
+                  "title": "should handle malicious input attempts @security @negative",
+                  "ok": true,
+                  "tags": [
+                    "security",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5404,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle malicious input attempts @security @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"<script>alert(\"XSS\")</script>\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ XSS test input handled: <script>alert(\"XSS\")...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"\"><script>alert(\"XSS\")</script>\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ XSS test input handled: \"><script>alert(\"XSS...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"'; DROP TABLE users; --\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ XSS test input handled: '; DROP TABLE users;...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"../../../etc/passwd\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ XSS test input handled: ../../../etc/passwd...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"{{7*7}}\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ XSS test input handled: {{7*7}}...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"${7*7}\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ XSS test input handled: ${7*7}...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"javascript:alert(\"XSS\")\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ XSS test input handled: javascript:alert(\"XS...\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle malicious input attempts @security @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test XSS prevention",
+                              "duration": 30
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:31:47.548Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-ffe191d1c8dc6ff15028",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 118,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Error Handling Testing",
+              "file": "negative/homepage/homepage-negative.spec.ts",
+              "line": 144,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should handle network failures gracefully @error @negative",
+                  "ok": true,
+                  "tags": [
+                    "error",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5342,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle network failures gracefully @error @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📡 Network failure handling tested\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle network failures gracefully @error @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test with network offline",
+                              "duration": 5121
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:31:52.956Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-d9b8e32925fcb8d0eda0",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 145,
+                  "column": 9
+                },
+                {
+                  "title": "should display meaningful error messages @error @negative",
+                  "ok": true,
+                  "tags": [
+                    "error",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5363,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should display meaningful error messages @error @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "ℹ️ No error messages visible (expected for normal operation)\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should display meaningful error messages @error @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Check error message display",
+                              "duration": 24
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:31:58.303Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-7955fdb16d40f7f33947",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 157,
+                  "column": 9
+                },
+                {
+                  "title": "should handle 404 scenarios @error @negative",
+                  "ok": true,
+                  "tags": [
+                    "error",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5329,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle 404 scenarios @error @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "✅ Valid URL handling confirmed\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle 404 scenarios @error @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test invalid URL handling",
+                              "duration": 5103
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:03.670Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-5b7dd85333d039a42f85",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 176,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Boundary Value Testing",
+              "file": "negative/homepage/homepage-negative.spec.ts",
+              "line": 192,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should handle extreme input values @boundary @negative",
+                  "ok": true,
+                  "tags": [
+                    "boundary",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5399,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle extreme input values @boundary @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "📊 Boundary test passed: 0 chars\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"a\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "📊 Boundary test passed: 1 chars\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "📊 Boundary test passed: 1000 chars\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "📊 Boundary test passed: 100 chars\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"!@#$%^&*()_+{}[]|\\:\";'<>?,./`~\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "📊 Boundary test passed: 30 chars\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"Unicode: 测试 🎉 🔥 ✅\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "📊 Boundary test passed: 19 chars\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"\n\t\r\f\u000b\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "📊 Boundary test passed: 5 chars\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "📊 Boundary test passed: 1000 chars\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle extreme input values @boundary @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test boundary values",
+                              "duration": 34
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:09.004Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-5ce4a288a3ef8473ad39",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 193,
+                  "column": 9
+                },
+                {
+                  "title": "should handle concurrent user actions @boundary @negative",
+                  "ok": true,
+                  "tags": [
+                    "boundary",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5551,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle concurrent user actions @boundary @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🧭 Analyzing navigation menu...\n"
+                            },
+                            {
+                              "text": "🧭 Analyzing navigation menu...\n"
+                            },
+                            {
+                              "text": "🧭 Analyzing navigation menu...\n"
+                            },
+                            {
+                              "text": "🔄 Concurrent operations: 3/3 successful\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle concurrent user actions @boundary @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test concurrent operations",
+                              "duration": 93
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:14.408Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-9eb84e3b531f536ea3fd",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 219,
+                  "column": 9
+                },
+                {
+                  "title": "should handle rapid user interactions @boundary @negative",
+                  "ok": true,
+                  "tags": [
+                    "boundary",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 7344,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle rapid user interactions @boundary @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🖱️ Testing rapid interactions on 58 elements\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle rapid user interactions @boundary @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test rapid clicking",
+                              "duration": 1890
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:19.963Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-bcaee83a22e313673d67",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 237,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Browser Compatibility Edge Cases",
+              "file": "negative/homepage/homepage-negative.spec.ts",
+              "line": 255,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should handle JavaScript disabled scenarios @compatibility @negative",
+                  "ok": true,
+                  "tags": [
+                    "compatibility",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5444,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle JavaScript disabled scenarios @compatibility @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔧 Basic content accessible without JavaScript\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle JavaScript disabled scenarios @compatibility @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test basic functionality without JavaScript",
+                              "duration": 13
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:27.312Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-02eef97482c51da4e2f1",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 256,
+                  "column": 9
+                },
+                {
+                  "title": "should handle cookie restrictions @compatibility @negative",
+                  "ok": true,
+                  "tags": [
+                    "compatibility",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5362,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle cookie restrictions @compatibility @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🍪 Cookie restriction handling tested\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle cookie restrictions @compatibility @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test functionality with cookie restrictions",
+                              "duration": 13
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:32.765Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-64644a86b217c2290540",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 268,
+                  "column": 9
+                },
+                {
+                  "title": "should handle local storage unavailable @compatibility @negative",
+                  "ok": true,
+                  "tags": [
+                    "compatibility",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5407,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle local storage unavailable @compatibility @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🧭 Analyzing navigation menu...\n"
+                            },
+                            {
+                              "text": "💾 Navigation works without local storage: 4 items\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle local storage unavailable @compatibility @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test without local storage",
+                              "duration": 46
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:38.131Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-2020ce009bf42c95a33c",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 280,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Performance Edge Cases",
+              "file": "negative/homepage/homepage-negative.spec.ts",
+              "line": 291,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should handle slow loading conditions @performance @negative",
+                  "ok": true,
+                  "tags": [
+                    "performance",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5492,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle slow loading conditions @performance @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "⏱️ Load time under test conditions: 5271ms\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle slow loading conditions @performance @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test slow loading tolerance",
+                              "duration": 5272
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:43.542Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-b529cc7a97f05d03f88f",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 292,
+                  "column": 9
+                },
+                {
+                  "title": "should handle memory constraints @performance @negative",
+                  "ok": true,
+                  "tags": [
+                    "performance",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 6917,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle memory constraints @performance @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔗 Analyzing all links on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Found 27 links to analyze\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Analyzing all links on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Found 27 links to analyze\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Analyzing all links on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Found 31 links to analyze\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Analyzing all links on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Found 31 links to analyze\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Analyzing all links on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Found 31 links to analyze\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "🧠 Memory constraint handling tested\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle memory constraints @performance @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test memory usage",
+                              "duration": 1542
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:49.038Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-8b10471c268eb9d1d7b2",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 305,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Security Edge Cases",
+              "file": "negative/homepage/homepage-negative.spec.ts",
+              "line": 324,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should prevent clickjacking @security @negative",
+                  "ok": true,
+                  "tags": [
+                    "security",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5481,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should prevent clickjacking @security @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🛡️ Frame protection indicators: ⚠️\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should prevent clickjacking @security @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test clickjacking protection",
+                              "duration": 13
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:32:55.959Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-c1058fcc11d2d3893a0b",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 325,
+                  "column": 9
+                },
+                {
+                  "title": "should handle CSRF protection @security @negative",
+                  "ok": true,
+                  "tags": [
+                    "security",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5492,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should handle CSRF protection @security @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📝 Analyzing forms on homepage...\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should handle CSRF protection @security @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test CSRF token handling",
+                              "duration": 10
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:33:01.444Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-1f79e35b3a90d6b31bf3",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 335,
+                  "column": 9
+                },
+                {
+                  "title": "should prevent directory traversal @security @negative",
+                  "ok": true,
+                  "tags": [
+                    "security",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5376,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should prevent directory traversal @security @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"../../../etc/passwd\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ Directory traversal attempt handled: ../../../etc/passwd...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"..\\..\\..\\windows\\system32\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ Directory traversal attempt handled: ..\\..\\..\\windows\\sys...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"....//....//....//etc/passwd\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ Directory traversal attempt handled: ....//....//....//et...\n"
+                            },
+                            {
+                              "text": "🔍 Testing search functionality with query: \"%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd\"\n"
+                            },
+                            {
+                              "text": "ℹ️ No search functionality found\n"
+                            },
+                            {
+                              "text": "🛡️ Directory traversal attempt handled: %2e%2e%2f%2e%2e%2f%2...\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should prevent directory traversal @security @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Test directory traversal protection",
+                              "duration": 19
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:33:06.940Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-c0aa05f6594e701d7eb4",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 352,
+                  "column": 9
+                }
+              ]
+            },
+            {
+              "title": "Bug Detection and Reporting",
+              "file": "negative/homepage/homepage-negative.spec.ts",
+              "line": 375,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should identify potential UI bugs @bug @negative",
+                  "ok": true,
+                  "tags": [
+                    "bug",
+                    "negative"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5620,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should identify potential UI bugs @bug @negative\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "🔗 Analyzing all links on homepage...\n"
+                            },
+                            {
+                              "text": "🔗 Found 27 links to analyze\n"
+                            },
+                            {
+                              "text": "🐛 POTENTIAL BUGS FOUND:\n"
+                            },
+                            {
+                              "text": "  1. Broken link: \"Link 21\" -> https://play.google.com/store (error)\n"
+                            },
+                            {
+                              "text": "  2. Broken link: \"Link 22\" -> https://play.google.com/store (error)\n"
+                            },
+                            {
+                              "text": "🐛 ACCESSIBILITY ISSUES FOUND:\n"
+                            },
+                            {
+                              "text": "  1. Multiple H1 headings found\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should identify potential UI bugs @bug @negative\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Check for UI consistency issues",
+                              "duration": 289
+                            },
+                            {
+                              "title": "Check for accessibility violations",
+                              "duration": 8
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:33:12.320Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-858770494c9f9c1ed1aa",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 376,
+                  "column": 9
+                },
+                {
+                  "title": "should identify performance bottlenecks @performance @bug",
+                  "ok": true,
+                  "tags": [
+                    "performance",
+                    "bug"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
+                          "status": "passed",
+                          "duration": 5494,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "🧪 Starting negative test: should identify performance bottlenecks @performance @bug\n"
+                            },
+                            {
+                              "text": "🏠 Loading EaseMyResearch.com homepage...\n"
+                            },
+                            {
+                              "text": "✅ Homepage loaded successfully\n"
+                            },
+                            {
+                              "text": "📊 Performance metrics analyzed for potential issues\n"
+                            },
+                            {
+                              "text": "🔍 Resource Analysis:\n"
+                            },
+                            {
+                              "text": "  Images: 88\n"
+                            },
+                            {
+                              "text": "  Scripts: 1\n"
+                            },
+                            {
+                              "text": "  Stylesheets: 4\n"
+                            },
+                            {
+                              "text": "⚠️ POTENTIAL ISSUE: High image count may impact performance\n"
+                            },
+                            {
+                              "text": "✅ Completed negative test: should identify performance bottlenecks @performance @bug\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "steps": [
+                            {
+                              "title": "Performance analysis",
+                              "duration": 17
+                            }
+                          ],
+                          "startTime": "2025-07-09T02:33:17.944Z",
+                          "annotations": [],
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "7d9f3c2c15a0e4811094-75f42927a4589a5fd68f",
+                  "file": "negative/homepage/homepage-negative.spec.ts",
+                  "line": 403,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-09T02:31:13.019Z",
+    "duration": 130478.29599999999,
+    "expected": 22,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
