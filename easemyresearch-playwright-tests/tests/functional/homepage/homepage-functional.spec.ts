@@ -377,16 +377,27 @@ test.describe('Homepage Functional Testing - EaseMyResearch.com', () => {
 
       await test.step('Check for authentication links', async () => {
         const authCheck = await homepage.checkLoginAccessibility();
-        console.log(`🔑 Authentication links found - Login: ${authCheck.loginLinkVisible}, Register: false`);
+        console.log(`🔑 Authentication links found - Login: ${authCheck.loginLinkVisible}, Signup: ${authCheck.signupLinkVisible}, Form Accessible: ${authCheck.formAccessible}`);
         
         if (!authCheck.formAccessible && authCheck.loginLinkVisible) {
           console.log('⚠️ Login link found but form not detected');
+        }
+        
+        if (authCheck.signupLinkVisible) {
+          console.log('✅ Signup functionality detected');
         }
       });
 
       await test.step('Test registration form access', async () => {
         await homepage.loadPage();
-        console.log('ℹ️ No registration links found on homepage');
+        
+        // Check if signup is accessible through the login modal
+        const authCheck = await homepage.checkLoginAccessibility();
+        if (authCheck.signupLinkVisible) {
+          console.log('✅ Registration option found');
+        } else {
+          console.log('ℹ️ No registration links found');
+        }
       });
 
       console.log('✅ Completed functional test: should test login/register links and forms @functional');

@@ -46,9 +46,9 @@ export class HomePage extends BasePageObject implements SearchCapability {
     forms: 'form',
     images: 'img',
     
-    // Authentication
-    loginLink: 'a[href*="login"], .login, .signin, button:has-text("login"), button:has-text("sign in"), text="Login/SignUp", text="Login"',
-    registerLink: 'a[href*="register"], a[href*="signup"], .register, .signup',
+    // Authentication - Updated to detect both login and signup
+    loginLink: 'text="Login/SignUp", text="Login", button:has-text("Login"), a:has-text("Login"), a[href*="login"], .login, .signin',
+    registerLink: 'text="Sign up now", text="Sign Up", text="Register", a:has-text("Sign up"), a:has-text("Register"), a[href*="register"], a[href*="signup"], .register, .signup',
     
     // Contact/Newsletter
     contactForm: 'form[action*="contact"], .contact-form',
@@ -135,28 +135,32 @@ export class HomePage extends BasePageObject implements SearchCapability {
     }
   }
 
+  /**
+   * Fill login form with credentials
+   */
   async fillLoginForm(email: string, password: string): Promise<boolean> {
     try {
       console.log(`🔐 Filling login form with email: ${email}`);
       
-      // Wait for modal to be ready
-      await this.page.waitForTimeout(1000);
+      // Wait for modal to be visible
+      await this.page.waitForSelector('.modal:visible', { timeout: 5000 });
       
-      // Find and fill email field
+      // Fill email field with multiple selectors
       const emailSelectors = [
+        'div:has-text("Email") input',
         'input[type="email"]',
         'input[placeholder*="email" i]',
-        'input[name*="email" i]',
-        'label:has-text("Email") + input',
-        'div:has-text("Email") input'
+        'input[name="email"]',
+        'input[id*="email"]',
+        '.modal input[type="text"]:first-of-type',
+        '.modal input:first-of-type'
       ];
-
+      
       let emailFilled = false;
       for (const selector of emailSelectors) {
         try {
-          const emailField = this.page.locator(selector);
-          if (await emailField.isVisible({ timeout: 2000 })) {
-            await emailField.clear();
+          const emailField = this.page.locator(selector).first();
+          if (await emailField.isVisible()) {
             await emailField.fill(email);
             console.log(`✅ Email filled using selector: ${selector}`);
             emailFilled = true;
@@ -166,27 +170,29 @@ export class HomePage extends BasePageObject implements SearchCapability {
           continue;
         }
       }
-
+      
       if (!emailFilled) {
         console.log('❌ Could not find or fill email field');
         return false;
       }
-
-      // Find and fill password field
+      
+      // Fill password field with multiple selectors
       const passwordSelectors = [
+        'div:has-text("Password") input',
         'input[type="password"]',
         'input[placeholder*="password" i]',
-        'input[name*="password" i]',
-        'label:has-text("Password") + input',
-        'div:has-text("Password") input'
+        'input[name="password"]',
+        'input[id*="password"]',
+        '.modal input[type="password"]',
+        '.modal input:nth-of-type(2)',
+        '.modal input:last-of-type'
       ];
-
+      
       let passwordFilled = false;
       for (const selector of passwordSelectors) {
         try {
-          const passwordField = this.page.locator(selector);
-          if (await passwordField.isVisible({ timeout: 2000 })) {
-            await passwordField.clear();
+          const passwordField = this.page.locator(selector).first();
+          if (await passwordField.isVisible()) {
             await passwordField.fill(password);
             console.log(`✅ Password filled using selector: ${selector}`);
             passwordFilled = true;
@@ -196,15 +202,48 @@ export class HomePage extends BasePageObject implements SearchCapability {
           continue;
         }
       }
-
+      
       if (!passwordFilled) {
         console.log('❌ Could not find or fill password field');
         return false;
       }
-
+      
+      // Click continue/login button
+      const submitSelectors = [
+        'button:has-text("Continue")',
+        'button:has-text("Login")',
+        'button:has-text("Sign In")',
+        'button[type="submit"]',
+        '.modal button:last-of-type',
+        '.modal [role="button"]:last-of-type'
+      ];
+      
+      let submitClicked = false;
+      for (const selector of submitSelectors) {
+        try {
+          const submitButton = this.page.locator(selector).first();
+          if (await submitButton.isVisible()) {
+            await submitButton.click();
+            console.log(`✅ Submit button clicked using selector: ${selector}`);
+            submitClicked = true;
+            break;
+          }
+        } catch (error) {
+          continue;
+        }
+      }
+      
+      if (!submitClicked) {
+        console.log('❌ Could not find or click submit button');
+        return false;
+      }
+      
+      // Wait for login to complete
+      await this.page.waitForTimeout(3000);
+      
       return true;
-    } catch (error: any) {
-      console.log(`❌ Error filling login form: ${error.message}`);
+    } catch (error) {
+      console.log(`❌ Could not fill login form: ${error}`);
       return false;
     }
   }
@@ -650,22 +689,34 @@ export class HomePage extends BasePageObject implements SearchCapability {
   /**
    * Check if login elements are accessible
    */
-  async checkLoginAccessibility(): Promise<{ loginLinkVisible: boolean; formAccessible: boolean }> {
+  async checkLoginAccessibility(): Promise<{ loginLinkVisible: boolean; formAccessible: boolean; signupLinkVisible: boolean }> {
     console.log('🔑 Checking authentication links...');
     
     const loginLinkVisible = await this.isElementVisible(this.selectors.loginLink);
     console.log(`   Login link: ${loginLinkVisible ? '✅' : '❌'}`);
     
     let formAccessible = false;
+    let signupLinkVisible = false;
+    
     if (loginLinkVisible) {
       const modalOpened = await this.clickLogin();
       formAccessible = modalOpened && await this.isLoginModalVisible();
       
+      if (formAccessible) {
+        // Check for signup link within the modal
+        signupLinkVisible = await this.isElementVisible(this.selectors.registerLink);
+        console.log(`   Signup link in modal: ${signupLinkVisible ? '✅' : '❌'}`);
+      }
+      
       if (!formAccessible) {
         console.log('⚠️ Login link found but form not detected');
       }
+    } else {
+      // Check for signup link on the main page
+      signupLinkVisible = await this.isElementVisible(this.selectors.registerLink);
+      console.log(`   Signup link on page: ${signupLinkVisible ? '✅' : '❌'}`);
     }
     
-    return { loginLinkVisible, formAccessible };
+    return { loginLinkVisible, formAccessible, signupLinkVisible };
   }
 }
