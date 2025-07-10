@@ -1,0 +1,143 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "easemyresearch":
+    - /url: /
+  - list:
+    - listitem:
+      - link "Home":
+        - /url: /
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Blog":
+        - /url: /blog
+    - listitem:
+      - button "My Account"
+- navigation "breadcrumb":
+  - list:
+    - listitem:
+      - button "Home"
+    - listitem: / My CRF
+- img "My CRF"
+- text: My CRF
+- img "Create CRF"
+- text: Create CRF
+- img "My Records"
+- text: My Records
+- img "Statistical Tables"
+- text: Statistical Tables
+- img "Graphs"
+- text: Graphs
+- heading "Hi, Welcome to the Individual Dashboard" [level=3]
+- img "card-icon"
+- heading "Forms Created" [level=5]
+- paragraph: 5/13
+- img "card-icon"
+- heading "Records Submitted" [level=5]
+- paragraph: "24"
+- img "card-icon"
+- heading "Storage Used" [level=5]
+- paragraph: 3.48MB / 2GB
+- img "bin-icon"
+- text: Deleted Forms
+- img "archive-icon"
+- text: Check Schedule
+- heading "Personal Forms:" [level=5]
+- textbox "Search by title or e-mail"
+- paragraph: Vancomycin
+- paragraph: Vancomycin TDM Case Record Perfoma
+- button "Three Dot":
+  - img "Three Dot"
+- button "Edit Form"
+- button "Add Data"
+- button "View Form"
+- paragraph: Form for Mental health checkup
+- paragraph: No description available
+- button "Three Dot":
+  - img "Three Dot"
+- button "Edit Form"
+- button "Add Data"
+- button "View Form"
+- paragraph: CNS TB
+- paragraph: No description available
+- button "Three Dot":
+  - img "Three Dot"
+- button "Edit Form"
+- button "Add Data"
+- button "View Form"
+- paragraph: StatisticalAnalysisFullCheck
+- paragraph: No description available
+- button "Three Dot":
+  - img "Three Dot"
+- button "Edit Form"
+- button "Add Data"
+- button "View Form"
+- paragraph: IRON STUDIES IN ANEMIA
+- paragraph: No description available
+- button "Three Dot":
+  - img "Three Dot"
+- button "Edit Form"
+- button "Add Data"
+- button "View Form"
+- heading "Shared Forms:" [level=5]
+- textbox "Search by title or e-mail"
+- paragraph: AMSP
+- paragraph: Hospital and Patient Information Form
+- button "View Form"
+- paragraph:
+  - text: "Permissions:"
+  - img "View Only"
+  - text: View & Add Records
+- button "Add Records"
+- button "View Form"
+- text: easemyresearch
+- link "Get it on Google Play":
+  - /url: https://play.google.com/store
+  - img "Get it on Google Play"
+- img "location"
+- text: "Address: 71, Satluj Apartments, Pratap Nagar sec-28, Jaipur - 302033"
+- img "mail"
+- link "support@easemyresearch.com":
+  - /url: mailto:support@easemyresearch.com
+- img "phone"
+- text: +91-6378887274
+- heading "Follow Us" [level=4]
+- link "linkdin":
+  - /url: https://www.linkedin.com
+  - img "linkdin"
+- link "twitter":
+  - /url: https://www.x.com
+  - img "twitter"
+- link "facebook":
+  - /url: https://www.facebook.com
+  - img "facebook"
+- link "snapchat":
+  - /url: https://www.snapchat.com
+  - img "snapchat"
+- link "instagram":
+  - /url: https://www.instagram.com
+  - img "instagram"
+- heading "Company" [level=4]
+- list:
+  - listitem:
+    - link "About Us":
+      - /url: /about-us
+  - listitem:
+    - link "Pricing":
+      - /url: /pricing
+  - listitem:
+    - link "Blog":
+      - /url: /blog
+- heading "Policies" [level=4]
+- list:
+  - listitem:
+    - link "Terms & Conditions":
+      - /url: /terms
+  - listitem:
+    - link "Privacy Policy":
+      - /url: /privacy
+- paragraph: © 2025 All Rights Reserved
+```
