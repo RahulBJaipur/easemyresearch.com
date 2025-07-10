@@ -27,7 +27,7 @@ test.describe('Homepage Negative Testing - EaseMyResearch.com', () => {
   ];
 
   const validUsers: TestUser[] = [
-    { name: 'Test User 1', email: 'testoneemr@gmail.com', password: '12345678', role: 'user' },
+    { name: 'Test User 1', email: 'testtwoemr@gmail.com', password: '12345678', role: 'user' },
     { name: 'Test User 2', email: 'testtwoemr@gmail.com', password: '12345678', role: 'user' }
   ];
 

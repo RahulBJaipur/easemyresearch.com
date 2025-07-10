@@ -105,7 +105,6 @@ export default defineConfig({
       name: 'chromium',
       use: { 
         ...devices['Desktop Chrome'],
-        channel: 'chrome',
       },
       dependencies: ['setup'],
     },
@@ -192,7 +191,6 @@ export default defineConfig({
       name: 'google-chrome',
       use: { 
         ...devices['Desktop Chrome'],
-        channel: 'chrome',
       },
       dependencies: ['setup'],
     },

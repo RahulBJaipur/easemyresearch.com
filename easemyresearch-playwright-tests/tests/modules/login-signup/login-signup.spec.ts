@@ -26,7 +26,7 @@ const testData = {
       role: 'Supervisor'
     },
     regularUser: {
-      email: 'testoneemr@gmail.com',
+      email: 'testtwoemr@gmail.com',
       password: '12345678',
       role: 'User'
     },

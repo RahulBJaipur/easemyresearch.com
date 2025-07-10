@@ -158,7 +158,7 @@ Create a `.env` file or set environment variables:
 BASE_URL=https://easemyresearch.com/
 
 # Test User Credentials
-TEST_USER_EMAIL_1=testoneemr@gmail.com
+TEST_USER_EMAIL_1=testtwoemr@gmail.com
 TEST_USER_PASSWORD_1=12345678
 TEST_USER_EMAIL_2=testtwoemr@gmail.com
 TEST_USER_PASSWORD_2=12345678

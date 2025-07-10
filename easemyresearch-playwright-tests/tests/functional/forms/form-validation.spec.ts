@@ -11,7 +11,7 @@ const testData = {
   formPrefix: 'Rahul_Validation_',
   timestamp: new Date().getTime(),
   testUser: {
-    email: 'testoneemr@gmail.com',
+    email: 'testtwoemr@gmail.com',
     password: '12345678'
   },
   sampleData: {

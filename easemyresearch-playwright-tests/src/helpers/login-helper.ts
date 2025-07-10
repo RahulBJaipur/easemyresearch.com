@@ -24,7 +24,7 @@ export class LoginHelper {
         }
         
         // Step 3: Fill email and password fields
-        await this.page.fill('input[type="email"]', 'testoneemr@gmail.com');
+        await this.page.fill('input[type="email"]', 'testtwoemr@gmail.com');
         await this.page.fill('input[type="password"]', '12345678');
         
         // Step 4: Click the Continue button

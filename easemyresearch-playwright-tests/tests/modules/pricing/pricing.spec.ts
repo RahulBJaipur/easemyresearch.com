@@ -477,7 +477,7 @@ test.describe('Pricing Module - Comprehensive Testing', () => {
         const loginButton = page.locator('text="Login", text="Sign In"');
         if (await loginButton.isVisible({ timeout: 3000 })) {
           await loginButton.click();
-          await page.fill('input[name="email"], input[type="email"]', 'testoneemr@gmail.com');
+          await page.fill('input[name="email"], input[type="email"]', 'testtwoemr@gmail.com');
           await page.fill('input[name="password"], input[type="password"]', '12345678');
           await page.click('button[type="submit"]');
           await page.waitForLoadState('networkidle');

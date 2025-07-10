@@ -13,7 +13,7 @@ const testData = {
   formPrefix: 'Rahul_Test_',
   timestamp: new Date().getTime(),
   testUser: {
-    email: 'testoneemr@gmail.com',
+    email: 'testtwoemr@gmail.com',
     password: '12345678'
   },
   formNames: {

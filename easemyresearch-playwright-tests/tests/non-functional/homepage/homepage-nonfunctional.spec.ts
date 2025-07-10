@@ -20,7 +20,7 @@ test.describe('Homepage Non-Functional Testing - EaseMyResearch.com', () => {
   const testUsers: TestUser[] = [
     {
       name: 'Test User 1',
-      email: 'testoneemr@gmail.com',
+      email: 'testtwoemr@gmail.com',
       password: '12345678',
       role: 'user'
     },

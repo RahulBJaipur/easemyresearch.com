@@ -24,7 +24,7 @@ test.describe('EaseMyResearch.com Homepage - Comprehensive Testing', () => {
   const testUsers: TestUser[] = [
     {
       name: 'Test User 1',
-      email: process.env.TEST_USER_EMAIL_1 || 'testoneemr@gmail.com',
+      email: process.env.TEST_USER_EMAIL_1 || 'testtwoemr@gmail.com',
       password: process.env.TEST_USER_PASSWORD_1 || '12345678',
       role: 'user'
     },
