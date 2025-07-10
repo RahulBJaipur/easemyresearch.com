@@ -1,0 +1,9 @@
+Bug ID,Title,Severity,Status,Module,Description,Impact,Workaround,Priority
+INFRA-001,Missing Browser Dependencies,Medium,Open,Infrastructure,System missing webkit and safari browser dependencies,Cannot test on webkit/safari browsers,Use Chromium for primary testing,P2
+INFRA-002,WebKit/Safari Dependencies Missing,Medium,Open,Infrastructure,Linux system lacks required libraries for webkit browsers,Limited mobile safari testing capability,Use Chromium for primary testing,P2
+INFRA-003,Microsoft Edge Not Installed,Low,Open,Infrastructure,Microsoft Edge browser not installed in test environment,No Microsoft Edge browser coverage,npx playwright install msedge,P3
+UI-001,Post-login Success Verification,Medium,Open,Login/SignUp,Login succeeds but post-login verification fails to find success indicators,Cannot fully validate successful login completion,Manual verification or update success indicators,P2
+UI-002,Mobile Login Button Visibility,Medium,Open,Login/SignUp,Login button not visible on mobile viewports,Mobile testing blocked for login functionality,Desktop testing working fine,P2
+BROWSER-001,Firefox Clipboard Permission Error,Low,Open,Browser Support,Firefox browser has clipboard-read permission issues,Limited Firefox testing capability,Remove clipboard permission from config,P3
+BROWSER-002,Chrome Installation Required,Low,Open,Browser Support,Google Chrome browser needs installation for testing,No Chrome-specific testing,npx playwright install chrome,P3
+MOBILE-001,Mobile Responsive Issues,Medium,Open,Mobile Testing,Various mobile viewport compatibility issues,Reduced mobile test coverage,Focus on desktop testing initially,P2
