@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+
+<Styles>
+  <Style ss:ID="Header">
+    <Font ss:Bold="1" ss:Color="#FFFFFF"/>
+    <Interior ss:Color="#1F4E79" ss:Pattern="Solid"/>
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+  <Style ss:ID="Critical">
+    <Interior ss:Color="#FF6B6B" ss:Pattern="Solid"/>
+    <Font ss:Bold="1"/>
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+  <Style ss:ID="High">
+    <Interior ss:Color="#FFE66D" ss:Pattern="Solid"/>
+    <Font ss:Bold="1"/>
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+  <Style ss:ID="Medium">
+    <Interior ss:Color="#A8E6CF" ss:Pattern="Solid"/>
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+  <Style ss:ID="Low">
+    <Interior ss:Color="#E8F5E8" ss:Pattern="Solid"/>
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+  <Style ss:ID="Default">
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+</Styles>
+
+<Worksheet ss:Name="Actual Defects Found">
+<Table>
+<Row>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Defect ID</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Date Found</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Severity</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Status</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Module</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Test Account</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Description</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Steps to Reproduce</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Expected Result</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Actual Result</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Browser</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Test Type</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Priority</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Notes</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-001</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Confirmed</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Navigation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Strict mode violation: Multiple &quot;My CRF&quot; elements on page</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Login with testoneemr@gmail.com
+2. Navigate to dashboard
+3. Check for &quot;My CRF&quot; elements</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Single &quot;My CRF&quot; element should be present</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">locator(&quot;text=My CRF&quot;) resolved to 2 elements: breadcrumb and tab</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Chromium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Authentication</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P2</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Found during authentication testing - affects element selection reliability</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-002</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="High"><Data ss:Type="String">High</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Environment</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Infrastructure</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">System</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Missing browser dependencies for Firefox, WebKit, and mobile browsers</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Execute tests on Firefox/WebKit
+2. Observe missing library errors</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">All browsers should be available for testing</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Missing libraries: libgstreamer, libgtk-4, libicudata, etc.</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Firefox/WebKit/Mobile</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Infrastructure</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P1</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Limits cross-browser testing capability - only Chromium working</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-003</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Environment</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Infrastructure</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">System</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Microsoft Edge browser not found in test environment</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Execute tests on Microsoft Edge
+2. Observe installation error</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Microsoft Edge should be available for testing</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Chromium distribution &quot;msedge&quot; is not found at /opt/microsoft/msedge/msedge</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Microsoft Edge</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Infrastructure</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P2</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Run &quot;npx playwright install msedge&quot; to resolve</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-004</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="High"><Data ss:Type="String">High</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Confirmed</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Performance</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Test timeout of 30000ms exceeded on mobile and tablet browsers</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Run tests on mobile-chrome/tablet-chrome
+2. Observe timeout errors</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Tests should complete within timeout period</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Target page, context or browser has been closed - timeout exceeded</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Mobile/Tablet</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Performance</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P1</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">May indicate performance issues or need for longer timeouts on mobile</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-005</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Confirmed</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Browser Compatibility</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">System</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Unknown permission: clipboard-read error in Firefox</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Execute tests in Firefox browser
+2. Observe permission error</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Firefox should handle clipboard permissions properly</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">browser.newContext: Unknown permission: clipboard-read</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Firefox</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Compatibility</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P2</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Firefox-specific permission handling issue</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-006</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Low"><Data ss:Type="String">Low</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Observation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Security</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Security validation working better than expected - may impact usability</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Enter special characters in form fields
+2. Attempt SQL injection
+3. Try XSS payloads</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Some validation expected, but usability should be maintained</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">All malicious inputs properly handled - no bypasses found</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Chromium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Security</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P3</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Good security but may need usability testing for edge cases</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-007</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Environment</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Testing Framework</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">System</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Python package installation blocked by externally-managed-environment</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Try to install Python packages
+2. Observe system restriction</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Should be able to install required testing packages</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">externally-managed-environment error blocks pip install</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">All</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Infrastructure</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P2</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Resolved by using built-in libraries, but may limit future enhancements</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-008</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Potential</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Form Creation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Multiple possible selectors needed for form creation elements</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Navigate to /create-crf
+2. Look for form creation indicators</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Consistent selectors for form creation elements</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Multiple fallback selectors required: title field, placeholder, text content</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Chromium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">UI Consistency</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P2</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">May indicate inconsistent UI element identification</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-009</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Low"><Data ss:Type="String">Low</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Limitation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Test Execution</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">System</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Long-running tests may timeout in background execution</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Execute comprehensive test suite
+2. Observe timeout on complex scenarios</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Tests should complete successfully in background</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Some comprehensive tests timed out after 900s</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">All</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Performance</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P3</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Background agent limitations - may need test splitting for complex scenarios</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">DEFECT-010</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Low"><Data ss:Type="String">Low</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Confirmed</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Authentication</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Authentication successful but element selection has ambiguity</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">1. Login with testoneemr@gmail.com
+2. Navigate to dashboard
+3. Check element uniqueness</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Unique selectors for all interactive elements</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Login works but some elements have multiple matches requiring specific selectors</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Chromium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">UI Testing</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">P3</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Authentication process working, minor selector refinement needed</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>

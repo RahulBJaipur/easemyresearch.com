@@ -1,0 +1,24 @@
+Defect ID,Date Found,Severity,Status,Module,Test Account,Description,Steps to Reproduce,Expected Result,Actual Result,Browser,Test Type,Priority,Notes
+DEFECT-001,2025-07-11,Medium,Confirmed,Navigation,testoneemr@gmail.com,"Strict mode violation: Multiple ""My CRF"" elements on page","1. Login with testoneemr@gmail.com
+2. Navigate to dashboard
+3. Check for ""My CRF"" elements","Single ""My CRF"" element should be present","locator(""text=My CRF"") resolved to 2 elements: breadcrumb and tab",Chromium,Authentication,P2,Found during authentication testing - affects element selection reliability
+DEFECT-002,2025-07-11,High,Environment,Infrastructure,System,"Missing browser dependencies for Firefox, WebKit, and mobile browsers","1. Execute tests on Firefox/WebKit
+2. Observe missing library errors",All browsers should be available for testing,"Missing libraries: libgstreamer, libgtk-4, libicudata, etc.",Firefox/WebKit/Mobile,Infrastructure,P1,Limits cross-browser testing capability - only Chromium working
+DEFECT-003,2025-07-11,Medium,Environment,Infrastructure,System,Microsoft Edge browser not found in test environment,"1. Execute tests on Microsoft Edge
+2. Observe installation error",Microsoft Edge should be available for testing,"Chromium distribution ""msedge"" is not found at /opt/microsoft/msedge/msedge",Microsoft Edge,Infrastructure,P2,"Run ""npx playwright install msedge"" to resolve"
+DEFECT-004,2025-07-11,High,Confirmed,Performance,testoneemr@gmail.com,Test timeout of 30000ms exceeded on mobile and tablet browsers,"1. Run tests on mobile-chrome/tablet-chrome
+2. Observe timeout errors",Tests should complete within timeout period,"Target page, context or browser has been closed - timeout exceeded",Mobile/Tablet,Performance,P1,May indicate performance issues or need for longer timeouts on mobile
+DEFECT-005,2025-07-11,Medium,Confirmed,Browser Compatibility,System,Unknown permission: clipboard-read error in Firefox,"1. Execute tests in Firefox browser
+2. Observe permission error",Firefox should handle clipboard permissions properly,browser.newContext: Unknown permission: clipboard-read,Firefox,Compatibility,P2,Firefox-specific permission handling issue
+DEFECT-006,2025-07-11,Low,Observation,Security,testoneemr@gmail.com,Security validation working better than expected - may impact usability,"1. Enter special characters in form fields
+2. Attempt SQL injection
+3. Try XSS payloads","Some validation expected, but usability should be maintained",All malicious inputs properly handled - no bypasses found,Chromium,Security,P3,Good security but may need usability testing for edge cases
+DEFECT-007,2025-07-11,Medium,Environment,Testing Framework,System,Python package installation blocked by externally-managed-environment,"1. Try to install Python packages
+2. Observe system restriction",Should be able to install required testing packages,externally-managed-environment error blocks pip install,All,Infrastructure,P2,"Resolved by using built-in libraries, but may limit future enhancements"
+DEFECT-008,2025-07-11,Medium,Potential,Form Creation,testoneemr@gmail.com,Multiple possible selectors needed for form creation elements,"1. Navigate to /create-crf
+2. Look for form creation indicators",Consistent selectors for form creation elements,"Multiple fallback selectors required: title field, placeholder, text content",Chromium,UI Consistency,P2,May indicate inconsistent UI element identification
+DEFECT-009,2025-07-11,Low,Limitation,Test Execution,System,Long-running tests may timeout in background execution,"1. Execute comprehensive test suite
+2. Observe timeout on complex scenarios",Tests should complete successfully in background,Some comprehensive tests timed out after 900s,All,Performance,P3,Background agent limitations - may need test splitting for complex scenarios
+DEFECT-010,2025-07-11,Low,Confirmed,Authentication,testoneemr@gmail.com,Authentication successful but element selection has ambiguity,"1. Login with testoneemr@gmail.com
+2. Navigate to dashboard
+3. Check element uniqueness",Unique selectors for all interactive elements,Login works but some elements have multiple matches requiring specific selectors,Chromium,UI Testing,P3,"Authentication process working, minor selector refinement needed"
