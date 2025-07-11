@@ -1,0 +1,6 @@
+Bug ID,Date,Severity,Test Type,Description,Attack Vector,Expected Defense,Actual Behavior,Status,Security Impact
+NEG-001,2025-07-11,Critical,SQL Injection,SQL injection in form title,'; DROP TABLE forms; --,Should sanitize SQL commands,SQL commands accepted,Open,High
+NEG-002,2025-07-11,Critical,XSS Attack,Cross-site scripting in text fields,"<script>alert(""XSS"")</script>",Should sanitize script tags,Script tags executed,Open,High
+NEG-003,2025-07-11,High,Data Validation,Number field accepts non-numeric input,"Enter ""abc"" in number field",Should validate numeric input,Non-numeric accepted,Open,Medium
+NEG-004,2025-07-11,Medium,Boundary Testing,Extremely long input accepted,Enter 10000+ character string,Should limit input length,Long input accepted,Open,Low
+NEG-005,2025-07-11,High,Email Validation,Invalid email formats accepted,Enter malformed emails,Should validate email format,Invalid emails accepted,Open,Medium
