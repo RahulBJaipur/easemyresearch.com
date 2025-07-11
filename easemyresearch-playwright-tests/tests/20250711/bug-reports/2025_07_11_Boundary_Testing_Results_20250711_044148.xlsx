@@ -1,0 +1,8 @@
+Field Type	Boundary Test	Input Value	Expected Behavior	Actual Behavior	Status	Bug ID
+Text Field	Maximum Length	10000+ characters	Reject or truncate	Accepted full input	❌ FAIL	NEG-004
+Number Field	Above Maximum	999999 (max=100)	Show validation error	Accepted invalid value	❌ FAIL	NEG-003
+Number Field	Below Minimum	-50 (min=0)	Show validation error	Accepted negative value	❌ FAIL	NEG-003
+Email Field	Invalid Format	invalid-email	Show validation error	Accepted invalid email	❌ FAIL	NEG-005
+Select Field	Empty Options	No options provided	Require at least one option	Empty options accepted	❌ FAIL	NEG-002
+File Upload	Oversized File	100MB+ file	Reject oversized file	File upload attempted	🔄 TESTING	FUNC-004
+Form Title	Empty Title	Empty string	Show required field error	Empty title accepted	❌ FAIL	FUNC-001

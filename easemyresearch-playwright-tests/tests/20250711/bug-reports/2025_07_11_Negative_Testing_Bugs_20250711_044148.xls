@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+
+<Styles>
+  <Style ss:ID="Header">
+    <Font ss:Bold="1" ss:Color="#FFFFFF"/>
+    <Interior ss:Color="#1F4E79" ss:Pattern="Solid"/>
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+  <Style ss:ID="Critical">
+    <Interior ss:Color="#FF6B6B" ss:Pattern="Solid"/>
+    <Font ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="High">
+    <Interior ss:Color="#FFE66D" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Medium">
+    <Interior ss:Color="#A8E6CF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Success">
+    <Interior ss:Color="#C8E6C9" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Default">
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+</Styles>
+
+<Worksheet ss:Name="Negative_Testing_Bugs_20250711_">
+<Table>
+<Row>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Bug ID</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Date</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Severity</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Test Type</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Description</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Attack Vector</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Expected Defense</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Actual Behavior</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Status</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Security Impact</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-001</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Critical"><Data ss:Type="String">Critical</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">SQL Injection</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">SQL injection in form title</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">'; DROP TABLE forms; --</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Should sanitize SQL commands</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">SQL commands accepted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Open</Data></Cell>
+<Cell ss:StyleID="High"><Data ss:Type="String">High</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-002</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Critical"><Data ss:Type="String">Critical</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">XSS Attack</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Cross-site scripting in text fields</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Should sanitize script tags</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Script tags executed</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Open</Data></Cell>
+<Cell ss:StyleID="High"><Data ss:Type="String">High</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-003</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="High"><Data ss:Type="String">High</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Data Validation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Number field accepts non-numeric input</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Enter &quot;abc&quot; in number field</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Should validate numeric input</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Non-numeric accepted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Open</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-004</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Boundary Testing</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Extremely long input accepted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Enter 10000+ character string</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Should limit input length</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Long input accepted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Open</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Low</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-005</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">2025-07-11</Data></Cell>
+<Cell ss:StyleID="High"><Data ss:Type="String">High</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Email Validation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Invalid email formats accepted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Enter malformed emails</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Should validate email format</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Invalid emails accepted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Open</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>

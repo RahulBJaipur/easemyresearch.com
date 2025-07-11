@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+
+<Styles>
+  <Style ss:ID="Header">
+    <Font ss:Bold="1" ss:Color="#FFFFFF"/>
+    <Interior ss:Color="#1F4E79" ss:Pattern="Solid"/>
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+  <Style ss:ID="Critical">
+    <Interior ss:Color="#FF6B6B" ss:Pattern="Solid"/>
+    <Font ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="High">
+    <Interior ss:Color="#FFE66D" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Medium">
+    <Interior ss:Color="#A8E6CF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Success">
+    <Interior ss:Color="#C8E6C9" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Default">
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+</Styles>
+
+<Worksheet ss:Name="Security_Testing_Results_202507">
+<Table>
+<Row>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Security Test</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Attack Type</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Target</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Test Account</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Result</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Vulnerability</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Severity</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Recommendation</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Input Sanitization</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">XSS</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Form Title Field</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ VULNERABLE</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Script tags accepted</Data></Cell>
+<Cell ss:StyleID="Critical"><Data ss:Type="String">Critical</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Implement input sanitization</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Input Validation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">SQL Injection</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Text Fields</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ VULNERABLE</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">SQL commands accepted</Data></Cell>
+<Cell ss:StyleID="Critical"><Data ss:Type="String">Critical</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Use parameterized queries</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Data Validation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Buffer Overflow</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Text Fields</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">⚠️ PARTIAL</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Long input accepted</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Implement length limits</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Email Validation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Format Bypass</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Email Fields</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ VULNERABLE</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Invalid emails accepted</Data></Cell>
+<Cell ss:StyleID="Medium"><Data ss:Type="String">Medium</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Strengthen email validation</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">File Upload</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Malicious Files</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">File Upload Fields</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">🔄 PENDING</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Testing in progress</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">TBD</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Test file type and size validation</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Session Management</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Session Hijacking</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Authentication</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Success"><Data ss:Type="String">✅ SECURE</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">No issues found</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">None</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Continue monitoring</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Authorization</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Privilege Escalation</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">User Roles</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">testoneemr@gmail.com</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">🔄 PENDING</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Testing in progress</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">TBD</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Test role-based access</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>

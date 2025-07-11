@@ -1,0 +1,11 @@
+Test Step	Feature	Status	Test Account	Results	Issues Found	Notes
+Step 1	Form Creation - All Field Types	✅ TESTED	testoneemr@gmail.com	Comprehensive form created with all sections	3 validation issues	Text, textarea, number, select, date, email, table, file upload tested
+Step 1	Form Creation - Screening Section	✅ TESTED	testoneemr@gmail.com	All field types added successfully	1 validation issue	Screening section with 5 field types
+Step 1	Form Creation - Main CRF Section	✅ TESTED	testoneemr@gmail.com	Complex fields including tables created	2 table issues	Multi-select, checkbox, radio, email, table, file upload
+Step 1	Form Creation - FollowUp Section	✅ TESTED	testoneemr@gmail.com	FollowUp fields added successfully	1 sequence issue	Status, date, measurement, progress, notes fields
+Step 1	Template-based Form Creation	⚠️ PARTIAL	testoneemr@gmail.com	Templates page accessible but limited	1 template issue	Template functionality needs verification
+Step 2	Data Addition - Initial Records	✅ TESTED	testoneemr@gmail.com	Data entry with edge cases tested	4 validation issues	Special characters, boundary values, malicious input tested
+Step 2	FollowUp Management - Sequence	✅ TESTED	testoneemr@gmail.com	FollowUp sequence testing completed	1 sequence issue	FollowUp 1 and 2 added, out-of-sequence tested
+Step 2	Date Filtering - FollowUps	⚠️ PARTIAL	testoneemr@gmail.com	Date filtering functionality tested	1 filter issue	Filter options may not be available
+Step 3	Record Editing	🔄 IN PROGRESS	testoneemr@gmail.com	Record modification testing	TBD	Edit, delete, restore operations
+Step 4	Form-Record Alignment	🔄 IN PROGRESS	testoneemr@gmail.com	Form changes impact on records	TBD	Field addition/deletion impact testing

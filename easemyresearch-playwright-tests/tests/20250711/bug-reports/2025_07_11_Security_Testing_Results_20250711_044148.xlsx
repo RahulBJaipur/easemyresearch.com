@@ -1,0 +1,8 @@
+Security Test	Attack Type	Target	Test Account	Result	Vulnerability	Severity	Recommendation
+Input Sanitization	XSS	Form Title Field	testoneemr@gmail.com	❌ VULNERABLE	Script tags accepted	Critical	Implement input sanitization
+Input Validation	SQL Injection	Text Fields	testoneemr@gmail.com	❌ VULNERABLE	SQL commands accepted	Critical	Use parameterized queries
+Data Validation	Buffer Overflow	Text Fields	testoneemr@gmail.com	⚠️ PARTIAL	Long input accepted	Medium	Implement length limits
+Email Validation	Format Bypass	Email Fields	testoneemr@gmail.com	❌ VULNERABLE	Invalid emails accepted	Medium	Strengthen email validation
+File Upload	Malicious Files	File Upload Fields	testoneemr@gmail.com	🔄 PENDING	Testing in progress	TBD	Test file type and size validation
+Session Management	Session Hijacking	Authentication	testoneemr@gmail.com	✅ SECURE	No issues found	None	Continue monitoring
+Authorization	Privilege Escalation	User Roles	testoneemr@gmail.com	🔄 PENDING	Testing in progress	TBD	Test role-based access

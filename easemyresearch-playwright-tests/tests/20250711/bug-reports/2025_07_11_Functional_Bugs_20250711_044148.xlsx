@@ -1,0 +1,6 @@
+Bug ID	Date	Severity	Module	Description	Steps to Reproduce	Expected Result	Actual Result	Status	Priority
+FUNC-001	2025-07-11	High	Form Creation	Form title field validation missing	Enter empty form title and save	Should show validation error	Form saves with empty title	Open	P1
+FUNC-002	2025-07-11	Medium	Field Addition	Duplicate field names allowed	Add two fields with same name	Should prevent duplicate names	Duplicate names accepted	Open	P2
+FUNC-003	2025-07-11	Critical	Data Entry	XSS vulnerability in text fields	Enter <script> tags in text field	Should sanitize script tags	Script tags stored as-is	Open	P0
+FUNC-004	2025-07-11	High	File Upload	File size validation bypass	Upload file larger than limit	Should reject oversized files	Large files accepted	Open	P1
+FUNC-005	2025-07-11	Medium	FollowUp	Out-of-sequence followup allowed	Add followup with earlier date	Should validate date sequence	Earlier date accepted	Open	P2

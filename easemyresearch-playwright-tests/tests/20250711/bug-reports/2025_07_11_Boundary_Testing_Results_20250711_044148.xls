@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+
+<Styles>
+  <Style ss:ID="Header">
+    <Font ss:Bold="1" ss:Color="#FFFFFF"/>
+    <Interior ss:Color="#1F4E79" ss:Pattern="Solid"/>
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+  <Style ss:ID="Critical">
+    <Interior ss:Color="#FF6B6B" ss:Pattern="Solid"/>
+    <Font ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="High">
+    <Interior ss:Color="#FFE66D" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Medium">
+    <Interior ss:Color="#A8E6CF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Success">
+    <Interior ss:Color="#C8E6C9" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Default">
+    <Borders>
+      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+      <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+    </Borders>
+  </Style>
+</Styles>
+
+<Worksheet ss:Name="Boundary_Testing_Results_202507">
+<Table>
+<Row>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Field Type</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Boundary Test</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Input Value</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Expected Behavior</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Actual Behavior</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Status</Data></Cell>
+<Cell ss:StyleID="Header"><Data ss:Type="String">Bug ID</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Text Field</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Maximum Length</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">10000+ characters</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Reject or truncate</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Accepted full input</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ FAIL</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-004</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Number Field</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Above Maximum</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">999999 (max=100)</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Show validation error</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Accepted invalid value</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ FAIL</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-003</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Number Field</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Below Minimum</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">-50 (min=0)</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Show validation error</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Accepted negative value</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ FAIL</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-003</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Email Field</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Invalid Format</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">invalid-email</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Show validation error</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Accepted invalid email</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ FAIL</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-005</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Select Field</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Empty Options</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">No options provided</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Require at least one option</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Empty options accepted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ FAIL</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">NEG-002</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">File Upload</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Oversized File</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">100MB+ file</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Reject oversized file</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">File upload attempted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">🔄 TESTING</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">FUNC-004</Data></Cell>
+</Row>
+<Row>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Form Title</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Empty Title</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Empty string</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Show required field error</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">Empty title accepted</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">❌ FAIL</Data></Cell>
+<Cell ss:StyleID="Default"><Data ss:Type="String">FUNC-001</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>
