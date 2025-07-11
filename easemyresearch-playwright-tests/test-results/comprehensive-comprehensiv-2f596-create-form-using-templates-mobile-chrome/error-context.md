@@ -1,0 +1,98 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - link "easemyresearch":
+    - /url: /
+  - button "Toggle navigation"
+- navigation "breadcrumb":
+  - list:
+    - listitem:
+      - button "Home"
+    - listitem: / Pricing
+- img "Exclusive Offer"
+- heading "Choose a plan that fits your needs" [level=1]
+- heading "Starter Plan" [level=3]
+- paragraph: ₹ 0 (0% off)
+- button "Choose plan"
+- link "Read more":
+  - /url: "#"
+- heading "Scholar Plan" [level=3]
+- paragraph: ₹ 12000 (60% off)
+- button "Choose plan"
+- link "Read more":
+  - /url: "#"
+- text: Plans Comparison
+- checkbox
+- heading "Have Questions? You'll get answers here" [level=2]
+- text: 1. What is EaseMyResearch?
+- paragraph: EasemyResearch is a platform designed to simplify research processes.
+- text: 2. Who can benefit from EaseMyResearch?
+- paragraph: It streamlines data collection, analysis, and collaboration for researchers.
+- text: 3. What are the key features of EaseMyResearch?
+- paragraph: Features include form creation, real-time data capture, and advanced analytics.
+- text: 4. How does EaseMyResearch ensure data security?
+- paragraph: It uses encryption and secure storage to protect your data.
+- text: 5. Can I collaborate and share my research data with others?
+- paragraph: Yes, you can share forms and data with team members based on your plan.
+- text: 6. Does EaseMyResearch assist with statistical analysis?
+- paragraph: Yes, it offers basic to advanced statistical analysis tools.
+- text: 7. Is EaseMyResearch scalable for other research fields?
+- paragraph: Yes, it’s designed to support various research fields.
+- img "Banner Background"
+- img "Start Flag Illustration"
+- heading "Get Started Today!" [level=2]
+- paragraph: Be part of a global network of clinical researchers who are transforming how research data is collected, secured, and shared.
+- button "Try for free"
+- button "Choose your plan"
+- text: easemyresearch
+- img "location"
+- text: "Address: 71, Satluj Apartments, Pratap Nagar sec-28, Jaipur - 302033"
+- img "mail"
+- link "support@easemyresearch.com":
+  - /url: mailto:support@easemyresearch.com
+- img "phone"
+- text: +91-6378887274
+- heading "Follow Us" [level=4]
+- link "linkdin":
+  - /url: https://www.linkedin.com
+  - img "linkdin"
+- link "twitter":
+  - /url: https://www.x.com
+  - img "twitter"
+- link "facebook":
+  - /url: https://www.facebook.com
+  - img "facebook"
+- link "snapchat":
+  - /url: https://www.snapchat.com
+  - img "snapchat"
+- link "instagram":
+  - /url: https://www.instagram.com
+  - img "instagram"
+- link "Get it on Google Play":
+  - /url: https://play.google.com/store
+  - img "Get it on Google Play"
+- link "Get it on Google Play":
+  - /url: https://play.google.com/store
+  - img "Get it on Google Play"
+- heading "Company" [level=4]
+- list:
+  - listitem:
+    - link "About Us":
+      - /url: /about-us
+  - listitem:
+    - link "Pricing":
+      - /url: /pricing
+  - listitem:
+    - link "Blog":
+      - /url: /blog
+- heading "Policies" [level=4]
+- list:
+  - listitem:
+    - link "Terms & Conditions":
+      - /url: /terms
+  - listitem:
+    - link "Privacy Policy":
+      - /url: /privacy
+- paragraph: © 2025 All Rights Reserved
+```
